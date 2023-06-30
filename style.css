@@ -47,11 +47,12 @@ html {
 }
 
 .flag {
-    width: 50%;
+    width: 80%;
     position: absolute;
-    margin-top: 8%;
+    margin-right: 100%;
+    margin-bottom: 30%;
     border: 1px solid #aaa;
-    margin-bottom: 20%;
+    margin-bottom: 40%;
 }
 
 #optionhalf {
