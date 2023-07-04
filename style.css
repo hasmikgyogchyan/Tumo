@@ -49,10 +49,9 @@ html {
 .flag {
     width: 80%;
     position: absolute;
-    margin-right: 100%;
-    margin-bottom: 30%;
+    margin-right: 90%;
     border: 1px solid #aaa;
-    margin-bottom: 40%;
+    margin-bottom: 90%; 
 }
 
 #optionhalf {
