@@ -1,115 +1,135 @@
 const countries = [
     {
         "flag": "flags/Flag_of_Andorra.svg.png",
-        "name": "Անդորրա"
+        "name": "Անդորրա լա Վելյա"
     },
     {
         "flag": "flags/Flag_of_Austria.svg.png",
-        "name": "Ավստրիա"
+        "name": "Վիեննա"
 
     },
     {
         "flag": "flags/Belgium.png",
-        "name": "Բելգիա"
+        "name": "Բրյուսել"
     },
     {
         "flag": "flags/Germany.png",
-        "name": "Գերմանիա"
+        "name": "Բեռլին"
     },
     {
         "flag": "flags/Greece.png",
-        "name": "Հունաստան"
+        "name": "Աթենք"
     },
     {
         "flag": "flags/Hungary.png",
-        "name": "Հունգարիա"
+        "name": "Բուդապեշտ"
     },
     {
         "flag": "flags/Liechtenstein.png",
-        "name": "Լիխտենշտայն"
+        "name": "Վադուց"
     },
     {
         "flag": "flags/Malta.png",
-        "name": "Մալթա"
+        "name": "Վալետա"
     },
     {
         "flag": "flags/Poland.png",
-        "name": "Լեհաստան"
+        "name": "Վարշավա"
     },
     {
         "flag": "flags/Romania.png",
-        "name": "Ռումինիա"
+        "name": "Բուխարեստ"
     },
     {
         "flag": "flags/Serbia.png",
-        "name": "Սերբիա"
+        "name": "Բելգրադ"
     },
     {
         "flag": "flags/Slovakia.png",
-        "name": "Սլովակիա"
+        "name": "Բրատիսլավա"
     },
     {
         "flag": "flags/Croatia.png",
-        "name": "Խորվաթիա"
+        "name": "Զագրեբ"
     },
 
     {
         "flag": "flags/Belarus.png",
-        "name": "Բելառուս"
+        "name": "Մինսկ"
     },
     {
         "flag": "flags/Denmark.png",
-        "name": "Դանիա"
+        "name": "Կոպենհագեն"
     },
     {
         "flag": "flags/France.png",
-        "name": "Ֆրանսիա"
+        "name": "Փարիզ"
     },
     {
         "flag": "flags/Irleand.png",
-        "name": "Իռլանդիա"
+        "name": "Դուբլին"
     },
     {
         "flag": "flags/Italy.png",
-        "name": "Իտալիա"
+        "name": "Հռոմ"
     },
     {
         "flag": "flags/Moldova.png",
-        "name": "Մոլդովա"
+        "name": "Քիշնև"
     },
     {
         "flag": "flags/Portugal.png",
-        "name": "Պորտուգալիա"
+        "name": "Լիսաբոն"
     },
     {
         "flag": "flags/Slovenia.png",
-        "name": "Սլովենիա"
+        "name": "Լյուբլյանա"
     },
     {
         "flag": "flags/Spain.png",
-        "name": "Իսպանիա"
+        "name": "Մադրիդ"
     },
     {
         "flag": "flags/Ukraine.png",
-        "name": "Ուկրաինա"
+        "name": "Կիև"
     },
     {
         "flag": "flags/United_Kingdom.png",
-        "name": "Միացյալ Թագավորություն"
+        "name": "Լոնդոն"
     },
-    
+
     {
         "flag": "flags/Armenia.png",
-        "name": "Հայաստան"
+        "name": "Երևան"
     },
     {
         "flag": "flags/Iran.png",
-        "name": "Իրան"
+        "name": "Թեհրան"
     },
     {
         "flag": "flags/India.png",
-        "name": "Հնդկաստան"
-    }
+        "name": "Նյու Դելի"
+    },
+    {
+        "flag": "flags/Syria.png",
+        "name": "Դամասկոս"
+    },
+    {
+        "flag": "flags/Japan.png",
+        "name": "Տոկիո"
+    },
 
+    {
+        "flag": "flags/South_Korea.png",
+        "name": "Սեուլ"
+    },
+    {
+        "flag": "flags/Georgia.png",
+        "name": " Թբիլիսի"
+    },
+    {
+        "flag": "flags/Turkey.png",
+        "name": "Անկարա"
+    }
 
 ] 

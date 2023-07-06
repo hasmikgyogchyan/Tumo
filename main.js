@@ -1,22 +1,37 @@
-let seconds = 10;
+let correct;
 
+let seconds = 10;
 let correctAnswer = 0;
 let incorrectAnswer = 0;
 function getElement(id) {
     return document.getElementById(id);
 }
-function getRandomCountry(){
-    return countries [Math.floor(Math.random(countries.length-1)*10)]
+function getRandomCountry() {
+    return countries[Math.floor(Math.round(Math.random()* countries.length - 1))]
 }
-function main (){
-    coun = getRandomCountry ();
-    getElement("flag").src = coun.flag;
-}
+function main() {
+    let options = [];
+    const maxOptions = 3;
+    while (options.length < maxOptions) {
+        let coun = getRandomCountry();
+        if (options.indexOf(coun) === -1) {
+            options.push(coun)
+        }
+    }
+    for (let i = 0; i < options.length; i++) {
+        console.log(options[i])
+        getElement(`option${i + 1}label`).innerHTML = options[i].name;
+        getElement(`option${i + 1}input`).value = options[i].name;
+        getElement(`option${i + 1}input`).checked = false;
+    }
+    correct = options[Math.round(Math.random() * (options.length - 1))];
+    getElement("flag").src = correct.flag;
+} 
 function timer() {
     setTimeout(finish, seconds * 1000);
     getElement("time").innerHTML = seconds;
     let countdown = setInterval(function () {
-        main ();
+        main();
         seconds--;
         getElement("time").textContent = seconds;
         if (seconds <= 0) clearInterval(countdown);
@@ -28,17 +43,21 @@ function check() {
     try {
         input = document.querySelector('input[name = "option"]:checked').value;
     } catch {
-        // alert("unecaq sxal")
-        return;
+        return; 
     }
-    correctAnswer++;
-    getElement("score").innerHTML = correctAnswer;
+    if (input === correct.name) {
+        correctAnswer++;
+        getElement("score").innerHTML = correctAnswer;
+    } else {
+        incorrectAnswer++;
+    }
+        main();
+}
+function finish() {
     clearInterval(checkInterval);
+    let percentage = 100;
+    getElement("alertaccuracy").innerHTML = `${percentage}%`;
 }
-function finish(){
-clearInterval(checkInterval);
-let percentage = 100;
-getElement("alertaccuracy").innerHTML = `${percentage}%`;
-}
-let checkInterval = setInterval(check, 50);
+let checkInterval = setInterval(check, 20);
+main();
 timer();
