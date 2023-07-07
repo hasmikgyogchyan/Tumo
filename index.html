@@ -1,57 +1,52 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charSet="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
     <title>🌍 Խաղ</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
     <link rel='stylesheet' href='./style.css'>
 </head>
 
 <body>
-    <h1>Նշել մայրաքաղաքը.</h1>
-
-
-
+    <h1>Նշել մայրաքաղաքը</h1>
 
     <section class="card" id="card">
-      
         <section class="infobar">
-            <div class="score"> ճշգրտություն: <span id="alertaccuracy">0</span></div>
+            <div class="score">Ճշգրտություն: <span id="alertaccuracy"></span></div>
         </section>
         <section class="infobar">
-            <div class="score"> Միավոր; <span id="score">0</span></div>
+            <div class="score">Միավոր: <span id="score">0</span></div>
             <div class="time" id="time"></div>
         </section>
         <div class="container">
-            <section>
+            <section class="section">
                 <img src="" alt="flag" class="flag" id="flag">
             </section>
-            <div class="border">
-                <section class="section" id="optionhalf">
-                    <div class="options">
-                        <div class="option">
-                            <input type="radio" value="" name="option" id="option1input" class="optionradio">
-                            <label for="option1input" class=label id="option1input"> </label>
-                        </div>
-                        <div class="option">
-                            <input type="radio" value="" name="option" id="option2input" class="optionradio">
-                            <label for="option2input" class=label id="option2input"> </label>
-                        </div>
-                        <div class="option">
-
-                            <input type="radio" value="" name="option" id="option3input" class="optionradio">
-                            <label for="option3input" class=label id="option3inputut"></label>
-                        </div>
+            <div class="border"></div>
+            <section class="section" id="optionhalf">
+                <div class="options">
+                    <div class="option">
+                        <input type="radio" value="" name="option" id="option1input" class="optionradio">
+                        <label for="option1input" class="label" id="option1label">Հնդկաստան</label>
                     </div>
-                </section>
-            </div>
+                    <div class="option">
+                        <input type="radio" value="" name="option" id="option2input" class="optionradio">
+                        <label for="option2input" class="label" id="option2label"></label>
+                    </div>
+                    <div class="option">
+                        <input type="radio" value="" name="option" id="option3input" class="optionradio">
+                        <label for="option3input" class="label" id="option3label"></label>
+                    </div>
+
+                </div>
+            </section>
         </div>
     </section>
-    <script src='countries.js'></script>
-
+    <script src = "countries.js"></script>
     <script src='main.js'></script>
+
 </body>
 
 </html>

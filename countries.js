@@ -66,7 +66,7 @@ const countries = [
         "name": "Փարիզ"
     },
     {
-        "flag": "flags/Irleand.png",
+        "flag": "flags/Ireland.png",
         "name": "Դուբլին"
     },
     {

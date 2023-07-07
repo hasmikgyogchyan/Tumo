@@ -1,13 +1,13 @@
-let correct;
 
-let seconds = 10;
+let correct;
+let seconds = 45;
 let correctAnswer = 0;
 let incorrectAnswer = 0;
 function getElement(id) {
     return document.getElementById(id);
 }
 function getRandomCountry() {
-    return countries[Math.floor(Math.round(Math.random()* countries.length - 1))]
+    return countries[Math.round(Math.random() * (countries.length - 1))];
 }
 function main() {
     let options = [];
@@ -15,23 +15,21 @@ function main() {
     while (options.length < maxOptions) {
         let coun = getRandomCountry();
         if (options.indexOf(coun) === -1) {
-            options.push(coun)
+            options.push(coun);
         }
     }
     for (let i = 0; i < options.length; i++) {
-        console.log(options[i])
         getElement(`option${i + 1}label`).innerHTML = options[i].name;
         getElement(`option${i + 1}input`).value = options[i].name;
         getElement(`option${i + 1}input`).checked = false;
     }
     correct = options[Math.round(Math.random() * (options.length - 1))];
     getElement("flag").src = correct.flag;
-} 
+}
 function timer() {
     setTimeout(finish, seconds * 1000);
     getElement("time").innerHTML = seconds;
     let countdown = setInterval(function () {
-        main();
         seconds--;
         getElement("time").textContent = seconds;
         if (seconds <= 0) clearInterval(countdown);
@@ -43,7 +41,7 @@ function check() {
     try {
         input = document.querySelector('input[name = "option"]:checked').value;
     } catch {
-        return; 
+        return;
     }
     if (input === correct.name) {
         correctAnswer++;
@@ -51,13 +49,29 @@ function check() {
     } else {
         incorrectAnswer++;
     }
-        main();
+    main();
 }
 function finish() {
     clearInterval(checkInterval);
-    let percentage = 100;
-    getElement("alertaccuracy").innerHTML = `${percentage}%`;
+
+    let percentage = Math.round(correctAnswer / (correctAnswer + incorrectAnswer) * 100)
+    let resultForAnswer;
+    if (isNaN(percentage)) {
+        getElement("alertaccuracy").innerHTML = "դուք ձախողվեցիք"
+    } else {
+        if (percentage >= 80) {
+            resultForAnswer = "հրաշալի է"
+        }
+        else if (percentage < 50) {
+            resultForAnswer = "վատ է"
+        }
+        else if (percentage >= 50 && percentage <= 80) {
+            resultForAnswer = "վատ չէ"
+        }
+        getElement("alertaccuracy").innerHTML = ` ${percentage}%`;
+    }
 }
-let checkInterval = setInterval(check, 20);
+
+let checkInterval = setInterval(check, 50);
 main();
 timer();
