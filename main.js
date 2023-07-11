@@ -53,11 +53,14 @@ function check() {
 }
 function finish() {
     clearInterval(checkInterval);
+    getElement ("alert").style.display = "block";
+    getElement ("card").style.display = "none";
+    getElement ("alertscore").innerHTML = correctAnswer;
 
     let percentage = Math.round(correctAnswer / (correctAnswer + incorrectAnswer) * 100)
     let resultForAnswer;
     if (isNaN(percentage)) {
-        getElement("alertaccuracy").innerHTML = "դուք ձախողվեցիք"
+        getElement ("alertscore1").innerHTML = ` ${percentage}%`;
     } else {
         if (percentage >= 80) {
             resultForAnswer = "հրաշալի է"
@@ -68,8 +71,11 @@ function finish() {
         else if (percentage >= 50 && percentage <= 80) {
             resultForAnswer = "վատ չէ"
         }
-        getElement("alertaccuracy").innerHTML = ` ${percentage}%`;
+        getElement ("alertscore1").innerHTML = `ձեր արդյունքը ${resultForAnswer}`;
     }
+}
+function refresh () {
+    location = location;
 }
 
 let checkInterval = setInterval(check, 50);

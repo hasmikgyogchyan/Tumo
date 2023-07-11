@@ -130,6 +130,28 @@ const countries = [
     {
         "flag": "flags/Turkey.png",
         "name": "Անկարա"
+    },
+    {
+        "flag": "flags/Estonia.png",
+        "name": "Տալլին"
+    },
+    {
+        "flag": "flags/USA.png",
+        "name": "Վաշինգտոն"
+
+    },
+    {
+        "flag": "flags/Argentina.png",
+        "name": "Բուենոս Այրես"
+
+    },
+    {
+        "flag": "flags/Argentina.png",
+        "name": "Բուենոս Այրես"
+    },
+    {
+        "flag": "flags/Canada.png",
+        "name": "Օտտավա"
     }
 
 ] 
